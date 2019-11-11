@@ -1,6 +1,78 @@
-@import url('reset');
-@import url('fonts');
-@import url('var');
+@import url('https://fonts.googleapis.com/css?family=Domine:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+$primaryfont: 'Montserrat',sans-serif;
+$secondaryfont: 'Open Sans',sans-serif;
+$minorfont: 'Domine',serif;
+$primarycolor: #fa5c65;
+$titlecolor: #314a5b;
+$textcolor: #9aa0ab;
+$decoratecolor: #f0454c;
+$primaryfontsize: 14px;
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    &:before, &:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+:focus, :active {
+    outline: none;
+}
+a {
+    &:focus, &:active {
+        outline: none;
+    }
+}
+nav, footer, header, aside {
+    display: block;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: $primaryfontsize;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input, button, textarea {
+    font-family: inherit;
+}
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+}
+a {
+    text-decoration: none;
+    &:visited, &:hover {
+        text-decoration: none;
+    }
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
 header {
     position: relative;
 }
@@ -40,16 +112,32 @@ header {
         letter-spacing: 0.3px;
     }
 }
+.head-block__logo_text {
+    transition: 0.4s;
+    &:hover {
+        color: $titlecolor;
+        transition: 0.4s;
+    }
+    &:hover span {
+        color: #ffffff;
+        transition: 0.4s;
+    }
+}
 .head-block__menu {
     color: #263742;
     font-family: $primaryfont;
-    font-size: 14px;
+    font-size: $primaryfontsize;
     font-weight: 700;
     line-height: 70px;
     text-transform: uppercase;
     display: inline-flex;
     li {
         margin-right: 28px;
+        transition: 0.4s;
+        &:hover {
+            color: $primarycolor;
+            transition: 0.4s;
+        }
         i {
             color: $primarycolor;
         }
@@ -101,6 +189,11 @@ header {
     position: absolute;
     left: 4px;
     top: 610px;
+    transition: 0.4s;
+    &:hover {
+        background-color: $titlecolor;
+        transition: 0.4s;
+    }
 }
 .info-block {
     padding-top: 82px;
@@ -140,12 +233,16 @@ header {
 .info-block__card__link {
     color: $primarycolor;
     font-family: $primaryfont;
-    font-size: 14px;
+    font-size: $primaryfontsize;
     font-weight: 400;
     line-height: 20px;
     text-transform: uppercase;
     display: block;
-    transition: 0.5s;
+    transition: 0.4s;
+    &:hover {
+        letter-spacing: 1px;
+        transition: 0.4s;
+    }
 }
 .portfolio-block {
     padding-top: 99px;
@@ -260,7 +357,7 @@ header {
 .team-block__body__job {
     color: $decoratecolor;
     font-family: $secondaryfont;
-    font-size: 14px;
+    font-size: $primaryfontsize;
     font-weight: 600;
     margin-bottom: 10px;
     display: flex;
@@ -268,7 +365,7 @@ header {
 .team-block__body__info {
     color: $textcolor;
     font-family: $secondaryfont;
-    font-size: 14px;
+    font-size: $primaryfontsize;
     font-weight: 400;
     line-height: 20px;
     display: block;
@@ -277,13 +374,18 @@ header {
 .team-block__link {
     color: $primarycolor;
     font-family: $primaryfont;
-    font-size: 14px;
+    font-size: $primaryfontsize;
     font-weight: 400;
     line-height: 20px;
     text-transform: uppercase;
     display: block;
-    transition: 0.5s;
+    transition: 0.4s;
     margin-left: 93%;
+    &:hover {
+        letter-spacing: 1px;
+        transition: 0.4s;
+        margin-left: 92%;
+    }
 }
 .footer-block {
     border-top: 1px solid #e6eaed;
@@ -297,6 +399,11 @@ header {
         color: #b9c0c6;
         font-size: 16px;
         margin-right: 20px;
+        transition: 0.4s;
+        &:hover {
+            color: $primarycolor;
+            transition: 0.4s;
+        }
     }
 }
 .footer-block__coopiright {
@@ -306,4 +413,51 @@ header {
     font-family: $secondaryfont;
     font-size: 13px;
     font-weight: 400;
+}
+@media (max-width:2160px) {
+    .content-wrapper {
+        max-width: 85%;
+    }
+}
+@media (max-width:1114px) {
+    .align-left {
+        flex-direction: column;
+    }
+    .info-block__card {
+        margin-right: 10px;
+        justify-content: space-evenly;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .portfolio-block {
+        img {
+            width: 75%;
+            margin-bottom: 15px;
+            margin-right: 0;
+        }
+    }
+    .team-block__body__card {
+        flex-direction: column;
+        img {
+            width: 120px;
+            height: 120px;
+        }
+    }
+    .team-block__body {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media (max-width:800px) {
+    .portfolio-block {
+        img {
+            width: 100%;
+        }
+    }
+}
+@media (max-width:728px) {
+    .head-block__menu {
+        display: none;
+    }
 }
