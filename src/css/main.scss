@@ -73,23 +73,39 @@ h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     font-weight: 400;
 }
-header {
-    position: relative;
-}
 .content-wrapper {
-    max-width: 940px;
+    max-width: 980px;
     display: flex;
     justify-content: space-between;
+    padding: 0 20px;
     margin: 0 auto;
 }
 .head-block {
     background-image: url(../img/head-block/headbg.png);
-    height: 1057px;
+    max-height: 100vh;
+    min-height: 1057px;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-bottom: 82px;
 }
-.head-block__logo {
+.navigation-block {
+    position: relative;
+}
+.navigation-block__body {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    max-width: 978px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 20px;
+}
+.navigation-block__logo {
     width: 145px;
     height: 75px;
     background-color: $primarycolor;
@@ -112,7 +128,7 @@ header {
         letter-spacing: 0.3px;
     }
 }
-.head-block__logo_text {
+.navigation-block__logo_text {
     transition: 0.4s;
     &:hover {
         color: $titlecolor;
@@ -123,7 +139,7 @@ header {
         transition: 0.4s;
     }
 }
-.head-block__menu {
+.navigation-block__menu {
     color: #263742;
     font-family: $primaryfont;
     font-size: $primaryfontsize;
@@ -143,6 +159,9 @@ header {
         }
     }
 }
+.head-block__body {
+    position: relative;
+}
 .head-block__title {
     color: $titlecolor;
     font-family: $primaryfont;
@@ -152,7 +171,7 @@ header {
     text-transform: uppercase;
     letter-spacing: -1.44px;
     position: absolute;
-    left: 4px;
+    left: 23px;
     top: 372px;
     span {
         font-family: $primaryfont;
@@ -171,7 +190,7 @@ header {
     font-weight: 400;
     line-height: 40.35px;
     position: absolute;
-    left: 4px;
+    left: 24px;
     top: 537px;
 }
 .btn__read-more {
@@ -187,7 +206,7 @@ header {
     border-radius: 5px;
     text-align: center;
     position: absolute;
-    left: 4px;
+    left: 24px;
     top: 610px;
     transition: 0.4s;
     &:hover {
@@ -196,7 +215,7 @@ header {
     }
 }
 .info-block {
-    padding-top: 82px;
+    margin-bottom: 99px;
 }
 .info-block__card {
     max-width: 295px;
@@ -245,7 +264,7 @@ header {
     }
 }
 .portfolio-block {
-    padding-top: 99px;
+    margin-bottom: 91px;
     img {
         margin-right: 77px;
     }
@@ -300,7 +319,6 @@ header {
     flex-direction: column;
 }
 .team-block {
-    padding-top: 91px;
     margin-bottom: 55px;
 }
 .team-block__head {
@@ -413,11 +431,6 @@ header {
     font-family: $secondaryfont;
     font-size: 13px;
     font-weight: 400;
-}
-@media (max-width:2160px) {
-    .content-wrapper {
-        max-width: 85%;
-    }
 }
 @media (max-width:1114px) {
     .align-left {

@@ -10,13 +10,13 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <section class="head-block">
-        <header class="content-wrapper">
-            <div class="head-block__logo">
-                <div class="head-block__logo_text">Freelancer<span>.</span></div>
+    <header class="navigation-block">
+        <div class="navigation-block__body">
+            <div class="navigation-block__logo">
+                <div class="navigation-block__logo_text">Freelancer<span>.</span></div>
             </div>
             <nav>
-                <ul class="head-block__menu">
+                <ul class="navigation-block__menu">
                     <li>About</li>
                     <li>Work</li>
                     <li>Portfolio</li>
@@ -25,10 +25,14 @@
                     <li><i class="fab fa-facebook-f"></i></li>
                 </ul>
             </nav>
+        </div>
+    </header>
+    <section class="head-block">
+        <div class="head-block__body content-wrapper">
             <h1 class="head-block__title">intelligence <br /> is nothing without <br /> ambition<span>.</span></h1>
             <span class="head-block__subtitle">We’re small but impressive creative agency.</span>
             <a href="#" class="btn__read-more">READ MORE</a>
-        </header>
+        </div>
     </section>
     <section class="info-block">
         <div class="content-wrapper">
@@ -106,5 +110,7 @@
             <span class="footer-block__coopiright">© Freelancer - Designed by Max Mishchenko</span>
         </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="build/js/burger.js"></script>
 </body>
 </html>
